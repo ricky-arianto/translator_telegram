@@ -1,10 +1,26 @@
+import os
+import logging
+from dotenv import load_dotenv
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import (
     ApplicationBuilder, CommandHandler, CallbackQueryHandler,
     MessageHandler, filters, ContextTypes
 )
 from openai import OpenAI
-import logging
+
+# ===== Load environment variables =====
+load_dotenv()  # membaca file .env
+
+TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+
+if not TELEGRAM_BOT_TOKEN:
+    raise ValueError("TELEGRAM_BOT_TOKEN tidak ditemukan! Pastikan ada di file .env")
+if not OPENAI_API_KEY:
+    raise ValueError("OPENAI_API_KEY tidak ditemukan! Pastikan ada di file .env")
+
+# Set environment variable untuk OpenAI
+os.environ["OPENAI_API_KEY"] = OPENAI_API_KEY
 
 # ===== Logging =====
 logging.basicConfig(
@@ -13,12 +29,8 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-# ===== API keys =====
-TELEGRAM_BOT_TOKEN = "input your telegram bot token here"
-OPENAI_API_KEY = "input your openai api key here"
-
 # ===== OpenAI client =====
-client = OpenAI(api_key=OPENAI_API_KEY)
+client = OpenAI()  # otomatis pakai OPENAI_API_KEY dari env
 
 # ===== User storage =====
 messages_original = {}   # message_id -> teks asli pengirim
@@ -86,7 +98,7 @@ async def callback_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
             return
 
         try:
-            prompt = f"Terjemahkan teks berikut ke bahasa '{target_lang}' engan akurat, tapi buat bahasanya terdengar alami dan santai, tidak terlalu baku atau formal. Pertahankan makna asli, termasuk nuansa atau gaya percakapan jika ada\n\n{original_text}"
+            prompt = f"Terjemahkan teks berikut ke bahasa '{target_lang}' dengan akurat, tapi buat bahasanya terdengar alami dan santai, tidak terlalu baku atau formal. Pertahankan makna asli, termasuk nuansa atau gaya percakapan jika ada\n\n{original_text}"
             resp = client.chat.completions.create(
                 model="gpt-3.5-turbo",
                 messages=[{"role": "user", "content": prompt}]
