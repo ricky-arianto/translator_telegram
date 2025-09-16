@@ -1,4 +1,4 @@
-Telegram Translator Bot 🤖🌐
+#Telegram Translator Bot 🤖🌐
 
 
 
@@ -7,7 +7,7 @@ Telegram Translator Bot 🤖🌐
 
 Telegram Translator Bot adalah bot Telegram yang dapat menerjemahkan pesan secara otomatis ke berbagai bahasa. Bot ini memanfaatkan OpenAI API untuk menghasilkan terjemahan yang natural dan akurat.
 
-🎯 Fitur
+##🎯 Fitur
 
 Terjemahkan pesan ke bahasa pilihan pengguna
 
@@ -17,7 +17,7 @@ Inline keyboard untuk memilih bahasa terjemahan
 
 Mudah di-deploy di server lokal atau cloud
 
-⚙️ Teknologi
+##⚙️ Teknologi
 
 Python 3.x
 
@@ -27,7 +27,7 @@ OpenAI API → proses penerjemahan AI
 
 python-dotenv → load token & API key dari file .env
 
-💾 Instalasi
+##💾 Instalasi
 
 Clone repositori:
 
@@ -35,7 +35,7 @@ git clone https://github.com/username/telegram-translator-bot.git
 cd telegram-translator-bot
 
 
-Install dependensi:
+##Install dependensi:
 
 pip install -r requirements.txt
 
@@ -46,7 +46,7 @@ TELEGRAM_BOT_TOKEN=your_telegram_bot_token
 OPENAI_API_KEY=your_openai_api_key
 
 
-Jalankan bot:
+##Jalankan bot:
 
 python bot.py
 
@@ -55,7 +55,7 @@ python bot.py
 Berikut adalah demo singkat cara kerja bot ini:
 https://youtube.com/shorts/S8mZalYZ3eY?feature=share
 
-📂 Struktur Folder
+##📂 Struktur Folder
 telegram-translator-bot/
 │
 ├─ bot.py             # File utama bot
@@ -63,11 +63,11 @@ telegram-translator-bot/
 ├─ README.md          # Dokumentasi
 └─ .env               # File environment (tidak di-push ke GitHub)
 
-🤝 Kontribusi
+##🤝 Kontribusi
 
 Kontribusi welcome!
 Fork repositori → buat perubahan → pull request
 
-📜 Lisensi
+##📜 Lisensi
 
 MIT License © 2025 Ricky Arianto
