@@ -25,6 +25,9 @@ Telegram Translator Bot adalah bot Telegram yang dapat **menerjemahkan pesan sec
 - **python-dotenv** → load token & API key dari file `.env`  
 
 ---
+## 🖼️ Preview Video
+Berikut adalah demo singkat cara kerja bot ini:
+[![Telegram Translator Bot Demo](https://img.youtube.com/vi/S8mZalYZ3eY/0.jpg)](https://youtube.com/shorts/S8mZalYZ3eY?feature=share)
 
 ## 💾 Instalasi
 
@@ -49,10 +52,6 @@ Jalankan bot:
 bash
 Copy code
 python bot.py
-
-🖼️ Preview Video
-Berikut adalah demo singkat cara kerja bot ini:
-https://youtube.com/shorts/S8mZalYZ3eY?feature=share
 
 📂 Struktur Folder
 text
