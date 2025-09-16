@@ -54,7 +54,7 @@ python bot.py
 Berikut adalah demo singkat cara kerja bot ini:
 https://youtube.com/shorts/S8mZalYZ3eY?si=rmE7sARxtezqnt3C
 
-📂 Struktur Folder
+## 📂 Struktur Folder
 bash
 Copy code
 telegram-translator-bot/
@@ -62,9 +62,9 @@ telegram-translator-bot/
 ├── requirements.txt  # Library Python
 ├── README.md         # Dokumentasi
 └── .env              # File environment (tidak di-push ke GitHub)
-🤝 Kontribusi
+## 🤝 Kontribusi
 Kontribusi welcome!
 Fork repositori → buat perubahan → pull request
 
-📜 Lisensi
+## 📜 Lisensi
 MIT License © 2025 Ricky Arianto
