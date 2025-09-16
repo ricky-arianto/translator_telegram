@@ -49,9 +49,10 @@ Jalankan bot:
 bash
 Copy code
 python bot.py
+
 🖼️ Preview Video
 Berikut adalah demo singkat cara kerja bot ini:
-
+https://youtube.com/shorts/S8mZalYZ3eY?feature=share
 
 📂 Struktur Folder
 text
