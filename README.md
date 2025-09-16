@@ -26,7 +26,8 @@ Telegram Translator Bot adalah bot Telegram yang dapat **menerjemahkan pesan sec
 
 ---
 ## 🖼️ Preview Video
-Berikut adalah demo singkat cara kerja bot ini:
+### Berikut adalah demo singkat cara kerja bot ini:
+
 [![Telegram Translator Bot Demo](https://img.youtube.com/vi/S8mZalYZ3eY/0.jpg)](https://youtube.com/shorts/S8mZalYZ3eY?feature=share)
 
 ## 💾 Instalasi
